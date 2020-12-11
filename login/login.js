@@ -5,5 +5,5 @@ if (navigator.appName=="Google Chrome"){
  }
  if (navigator.appName=="Google Chrome"){
  
-    location.href="login.js";
+    location.href="http://https://www.youtube.com/watch?v=pnGiaGcBJQM";
  }
