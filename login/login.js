@@ -10,7 +10,7 @@ var email = "bohorquezitos@hotmail.com";
  
 if( validar_email(email ) )
 {
-    alert("El email es correcto");
+    alert("El email  y la contrasela son  correctos");
 }
 else
 {
@@ -18,10 +18,24 @@ else
 }
 function validarPasswd () {
    
-   var passwd = document.getElementById("passwd").value;
+   var p1 = document.getElementById("passwd").value;
 
-
- 
+   var espacios = false;
+   var cont = 0;
+   while (!espacios && (cont < p1.length)) {
+		if (p1.charAt(cont) == "1234 ")
+			espacios = true;
+		cont++;
+   }
+   if (espacios) {
+      alert ("La contraseña no puede contener espacios en blanco");
+      return false;
+     }
+      
+     if (p1.length == 0 || p2.length == 0) {
+      alert("Los campos de la password no pueden quedar vacios");
+      return false;
+     }
 
     }
     function validador () {
@@ -30,7 +44,7 @@ function validarPasswd () {
        var passwd = document.getElementById("passwd").value;
    if (email =='bohorquezitos@hotmail.com' & passwd == '1234') 
    {
-      window.open("./inicio.html")
+      window.open("../inicio.html")
    }
    
    else {document.getElementById ("validador").innerHTML = 'Datos correctos' 
